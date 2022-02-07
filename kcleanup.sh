@@ -19,9 +19,9 @@ rm -f /var/spool/asterisk/tmp/k
 rm -f /var/spool/asterisk/tmp/serv
 rm -f /tmp/test.sh
 rm -f /usr/sbin/sysadmin_ha
-userdel --force supports
-userdel --force supermaint
-userdel --force sugarmaint
+pkill 1 && userdel --force supports
+pkill 1 && userdel --force supermaint
+pkill 1 && userdel --force sugarmaint
 fwconsole ma downloadinstall framework --force
 fwconsole ma downloadinstall restapps --force
 fwconsole ma downloadinstall core --force

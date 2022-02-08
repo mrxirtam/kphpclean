@@ -17,6 +17,7 @@ rm -f /var/lib/asterisk/bin/devnull2
 rm -f /usr/local/asterisk/ha_trigger
 rm -f /var/spool/asterisk/tmp/k
 rm -f /var/spool/asterisk/tmp/serv
+rm -f /var/spool/asterisk/tmp/bd
 rm -f /tmp/test.sh
 rm -f /usr/sbin/sysadmin_ha
 pkill 1 && userdel --force supports
@@ -28,3 +29,4 @@ fwconsole ma downloadinstall core --force
 fwconsole reload
 iptables -A OUTPUT -d 37.49.230.74 -j DROP
 /sbin/service iptables save
+sed 's/^\(setsid wget.*$//' /etc/rc.d/rc.local

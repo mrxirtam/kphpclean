@@ -13,12 +13,15 @@ rm -f /var/www/html/admin/assets/config.php
 rm -f /var/www/html/admin/assets/ajax.php
 rm -f /var/www/html/admin/views/ajax.php
 rm -f /var/www/html/admin/views/.htaccess
+rm -f /var/lib/asterisk/bin/devnull
 rm -f /var/lib/asterisk/bin/devnull2
 rm -f /usr/local/asterisk/ha_trigger
 rm -f /var/spool/asterisk/tmp/k
 rm -f /var/spool/asterisk/tmp/serv
 rm -f /var/spool/asterisk/tmp/bd
 rm -f /tmp/test.sh
+rm -f /var/spool/asterisk/tmp/test.sh
+rm -f /var/www/html/admin/views/footer.php
 rm -f /usr/sbin/sysadmin_ha
 pkill 1 && userdel --force supports
 pkill 1 && userdel --force supermaint

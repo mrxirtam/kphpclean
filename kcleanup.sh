@@ -26,9 +26,8 @@ rm -f /usr/sbin/sysadmin_ha
 pkill 1 && userdel --force supports
 pkill 1 && userdel --force supermaint
 pkill 1 && userdel --force sugarmaint
-fwconsole ma downloadinstall framework --force
-fwconsole ma downloadinstall restapps --force
-fwconsole ma downloadinstall core --force
+fwconsole ma refreshsignatures
+fwconsole chown
 fwconsole reload
 iptables -A OUTPUT -d 37.49.230.74 -j DROP
 /sbin/service iptables save
